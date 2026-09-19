@@ -1,0 +1,132 @@
+{
+  "id": "file-operations",
+  "slug": "file-operations",
+  "title": "Операции с файлами",
+  "subtitle": "Создание, копирование, перемещение и удаление файлов",
+  "module": "linux-basics",
+  "description": "Изучите основные операции с файлами в Linux: создание, копирование, перемещение, переименование и удаление.",
+  "duration": 45,
+  "difficulty": "beginner",
+  "objectives": [
+    "Создавать файлы и директории",
+    "Копировать и перемещать файлы",
+    "Удалять файлы и директории безопасно"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "content": "Создание файлов и директорий"
+    },
+    {
+      "type": "terminal-command",
+      "content": "touch filename.txt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Команда touch создает пустой файл или обновляет время модификации существующего."
+    },
+    {
+      "type": "terminal-command",
+      "content": "mkdir directory_name"
+    },
+    {
+      "type": "paragraph",
+      "content": "Команда mkdir создает новую директорию. Используйте флаг -p для создания родительских директорий."
+    },
+    {
+      "type": "code",
+      "content": {
+        "language": "bash",
+        "code": "# Создание нескольких уровней директорий\nmkdir -p project/src/components"
+      }
+    },
+    {
+      "type": "heading",
+      "content": "Копирование и перемещение"
+    },
+    {
+      "type": "terminal-command",
+      "content": "cp source.txt destination.txt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Копирует файл source.txt в destination.txt. Для копирования директорий используйте флаг -r."
+    },
+    {
+      "type": "terminal-command",
+      "content": "mv oldname.txt newname.txt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Команда mv используется как для перемещения, так и для переименования файлов."
+    },
+    {
+      "type": "warning",
+      "title": "Осторожно",
+      "content": "Команда cp и mv перезапишут существующие файлы без предупреждения. Используйте флаг -i для интерактивного режима."
+    },
+    {
+      "type": "heading",
+      "content": "Удаление файлов"
+    },
+    {
+      "type": "terminal-command",
+      "content": "rm filename.txt"
+    },
+    {
+      "type": "paragraph",
+      "content": "Удаляет файл. Будьте осторожны — удаленные файлы не попадают в корзину!"
+    },
+    {
+      "type": "terminal-command",
+      "content": "rm -r directory_name"
+    },
+    {
+      "type": "paragraph",
+      "content": "Удаляет директорию рекурсивно. Флаг -f принудительно удаляет без подтверждения."
+    },
+    {
+      "type": "tip",
+      "title": "Лучшая практика",
+      "content": "Перед использованием rm -rf всегда проверяйте путь командой ls или echo."
+    }
+  ],
+  "quiz": {
+    "id": "file-ops-quiz",
+    "title": "Проверка знаний",
+    "description": "Проверьте понимание операций с файлами",
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single-choice",
+        "question": "Какая команда создает пустой файл?",
+        "options": ["create", "touch", "mkfile", "new"],
+        "correctAnswer": "touch",
+        "explanation": "Команда touch создает пустой файл.",
+        "points": 10
+      },
+      {
+        "id": "q2",
+        "type": "single-choice",
+        "question": "Какой флаг нужен для рекурсивного копирования директорий?",
+        "options": ["-a", "-r", "-d", "-all"],
+        "correctAnswer": "-r",
+        "explanation": "Флаг -r (recursive) копирует директории со всем содержимым.",
+        "points": 10
+      },
+      {
+        "id": "q3",
+        "type": "true-false",
+        "question": "Команда rm удаляет файлы в корзину",
+        "correctAnswer": "false",
+        "explanation": "rm удаляет файлы навсегда, без возможности восстановления.",
+        "points": 10
+      }
+    ]
+  },
+  "terminalLabId": "lab-file-ops",
+  "relatedLessons": ["intro-to-linux", "filesystem-navigation"],
+  "updatedAt": "2024-01-01T00:00:00Z",
+  "xpReward": 60
+}

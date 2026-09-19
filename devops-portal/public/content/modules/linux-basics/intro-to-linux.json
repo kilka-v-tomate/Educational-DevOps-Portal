@@ -1,0 +1,108 @@
+{
+  "id": "intro-to-linux",
+  "slug": "intro-to-linux",
+  "title": "Введение в Linux",
+  "subtitle": "Что такое Linux и почему он важен для DevOps",
+  "module": "linux-basics",
+  "description": "Первый урок по основам Linux. Узнайте историю, архитектуру и основные преимущества этой операционной системы.",
+  "duration": 30,
+  "difficulty": "beginner",
+  "objectives": [
+    "Понимать что такое Linux",
+    "Знать основные компоненты системы",
+    "Различать дистрибутивы Linux"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "content": "Что такое Linux?"
+    },
+    {
+      "type": "paragraph",
+      "content": "Linux — это семейство Unix-подобных операционных систем на основе ядра Linux, разработанного Линусом Торвальдсом в 1991 году. Это свободное программное обеспечение с открытым исходным кодом, распространяемое под лицензией GPL."
+    },
+    {
+      "type": "note",
+      "title": "Важно знать",
+      "content": "Linux является основой для большинства серверов в интернете, облачных платформ и контейнерных решений. Для DevOps инженера знание Linux — обязательный навык."
+    },
+    {
+      "type": "heading",
+      "content": "Архитектура Linux"
+    },
+    {
+      "type": "list",
+      "content": [
+        "Ядро (Kernel) — управляет ресурсами системы",
+        "Оболочка (Shell) — интерфейс для взаимодействия с ядром",
+        "Файловая система — организация хранения данных",
+        "Утилиты — программы для выполнения задач"
+      ]
+    },
+    {
+      "type": "code",
+      "content": {
+        "language": "bash",
+        "code": "# Проверка версии ядра\nuname -r\n\n# Информация о системе\nuname -a"
+      }
+    },
+    {
+      "type": "heading",
+      "content": "Популярные дистрибутивы"
+    },
+    {
+      "type": "table",
+      "content": {
+        "headers": ["Дистрибутив", "Основан на", "Использование"],
+        "rows": [
+          ["Ubuntu", "Debian", "Desktop/Server"],
+          ["CentOS", "RHEL", "Server"],
+          ["Debian", "Independent", "Server"],
+          ["Alpine", "Independent", "Containers"]
+        ]
+      }
+    },
+    {
+      "type": "warning",
+      "title": "Обратите внимание",
+      "content": "Для DevOps особенно важны минималистичные дистрибутивы like Alpine Linux, которые используются в контейнерах."
+    }
+  ],
+  "quiz": {
+    "id": "intro-quiz",
+    "title": "Проверка знаний",
+    "description": "Ответьте на вопросы по материалу урока",
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single-choice",
+        "question": "Кто разработал ядро Linux?",
+        "options": ["Билл Гейтс", "Линус Торвальдс", "Стив Джобс", "Ричард Столлман"],
+        "correctAnswer": "Линус Торвальдс",
+        "explanation": "Линус Торвальдс начал разработку ядра Linux в 1991 году.",
+        "points": 10
+      },
+      {
+        "id": "q2",
+        "type": "true-false",
+        "question": "Linux является проприетарным программным обеспечением",
+        "correctAnswer": "false",
+        "explanation": "Linux распространяется под свободной лицензией GPL с открытым исходным кодом.",
+        "points": 10
+      },
+      {
+        "id": "q3",
+        "type": "single-choice",
+        "question": "Какой компонент Linux управляет ресурсами системы?",
+        "options": ["Shell", "Kernel", "GUI", "Bootloader"],
+        "correctAnswer": "Kernel",
+        "explanation": "Ядро (Kernel) управляет памятью, процессами и устройствами.",
+        "points": 10
+      }
+    ]
+  },
+  "relatedLessons": ["filesystem-navigation", "file-operations"],
+  "updatedAt": "2024-01-01T00:00:00Z",
+  "xpReward": 50
+}

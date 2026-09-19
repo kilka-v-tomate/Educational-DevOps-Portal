@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ls",
+    "title": "ls",
+    "category": "Linux Commands",
+    "tags": ["навигация", "файлы", "базовые"],
+    "description": "Вывод списка файлов и директорий",
+    "content": "Команда ls выводит содержимое указанной директории. По умолчанию показывает текущую директорию.",
+    "examples": [
+      {"language": "bash", "code": "ls -la"},
+      {"language": "bash", "code": "ls -lh /var/log"}
+    ],
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "cd",
+    "title": "cd",
+    "category": "Linux Commands",
+    "tags": ["навигация", "директории", "базовые"],
+    "description": "Смена текущей директории",
+    "content": "Команда cd (change directory) меняет рабочую директорию пользователя.",
+    "examples": [
+      {"language": "bash", "code": "cd /home/user"},
+      {"language": "bash", "code": "cd .."},
+      {"language": "bash", "code": "cd ~"}
+    ],
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "pwd",
+    "title": "pwd",
+    "category": "Linux Commands",
+    "tags": ["навигация", "путь", "базовые"],
+    "description": "Показать текущую директорию",
+    "content": "Команда pwd (print working directory) выводит полный путь к текущей директории.",
+    "examples": [{"language": "bash", "code": "pwd"}],
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "docker-run",
+    "title": "docker run",
+    "category": "Docker Commands",
+    "tags": ["контейнеры", "запуск", "docker"],
+    "description": "Запуск контейнера из образа",
+    "content": "Команда docker run создает и запускает новый контейнер из указанного образа.",
+    "examples": [
+      {"language": "bash", "code": "docker run -d -p 80:80 nginx"},
+      {"language": "bash", "code": "docker run --name myapp -e ENV=prod myimage"}
+    ],
+    "updatedAt": "2024-01-01T00:00:00Z"
+  },
+  {
+    "id": "kubernetes-pod",
+    "title": "Pod",
+    "category": "Kubernetes",
+    "tags": ["k8s", "архитектура", "концепции"],
+    "description": "Минимальная единица развертывания в Kubernetes",
+    "content": "Pod — это наименьшая деплоябельная единица в Kubernetes. Pod может содержать один или несколько контейнеров, которые разделяют сеть и хранилище.",
+    "relatedEntries": ["kubernetes-deployment", "kubernetes-service"],
+    "updatedAt": "2024-01-01T00:00:00Z"
+  }
+]

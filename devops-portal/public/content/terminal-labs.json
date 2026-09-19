@@ -1,0 +1,35 @@
+[
+  {
+    "id": "lab-navigation",
+    "title": "Навигация по файловой системе",
+    "description": "Практическое задание по навигации в Linux",
+    "goal": "Создайте структуру директорий и переместитесь в нужную папку",
+    "hints": [
+      "Используйте mkdir для создания директорий",
+      "Используйте cd для перемещения",
+      "Проверьте текущую директорию командой pwd"
+    ],
+    "initialCommands": [],
+    "expectedState": {
+      "directories": ["project", "project/src"],
+      "currentDir": "/home/student/project/src"
+    },
+    "points": 20
+  },
+  {
+    "id": "lab-file-ops",
+    "title": "Операции с файлами",
+    "description": "Создание, копирование и удаление файлов",
+    "goal": "Создайте файл, скопируйте его и удалите оригинал",
+    "hints": [
+      "Используйте touch для создания файла",
+      "Используйте cp для копирования",
+      "Используйте rm для удаления"
+    ],
+    "initialCommands": [],
+    "expectedState": {
+      "files": ["test.txt", "test_copy.txt"]
+    },
+    "points": 30
+  }
+]

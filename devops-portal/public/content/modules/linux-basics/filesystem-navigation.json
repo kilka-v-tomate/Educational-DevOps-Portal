@@ -1,0 +1,126 @@
+{
+  "id": "filesystem-navigation",
+  "slug": "filesystem-navigation",
+  "title": "Навигация по файловой системе",
+  "subtitle": "Работа с директориями и путями",
+  "module": "linux-basics",
+  "description": "Научитесь перемещаться по файловой системе Linux, понимать структуру путей и использовать основные команды навигации.",
+  "duration": 45,
+  "difficulty": "beginner",
+  "objectives": [
+    "Понимать структуру файловой системы Linux",
+    "Использовать команды pwd, cd, ls",
+    "Различать абсолютные и относительные пути"
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "content": "Структура файловой системы"
+    },
+    {
+      "type": "paragraph",
+      "content": "Файловая система Linux имеет иерархическую древовидную структуру. Корневая директория обозначается символом '/' и содержит все остальные директории и файлы."
+    },
+    {
+      "type": "code",
+      "content": {
+        "language": "text",
+        "code": "/\n├── bin/      # Основные бинарные файлы\n├── etc/      # Конфигурационные файлы\n├── home/     # Домашние директории пользователей\n├── var/      # Переменные данные (логи, кэш)\n├── tmp/      # Временные файлы\n├── usr/      # Пользовательские программы\n└── root/     # Домашняя директория root"
+      }
+    },
+    {
+      "type": "heading",
+      "content": "Основные команды навигации"
+    },
+    {
+      "type": "terminal-command",
+      "content": "pwd"
+    },
+    {
+      "type": "paragraph",
+      "content": "Команда pwd (print working directory) показывает полный путь к текущей директории."
+    },
+    {
+      "type": "terminal-output",
+      "content": "/home/student"
+    },
+    {
+      "type": "terminal-command",
+      "content": "ls -la"
+    },
+    {
+      "type": "paragraph",
+      "content": "Команда ls列出 содержимое директории. Флаг -l показывает детализированный список, -a показывает скрытые файлы."
+    },
+    {
+      "type": "terminal-command",
+      "content": "cd /path/to/directory"
+    },
+    {
+      "type": "paragraph",
+      "content": "Команда cd (change directory) меняет текущую директорию."
+    },
+    {
+      "type": "tip",
+      "title": "Совет",
+      "content": "Используйте Tab для автодополнения путей. Это экономит время и уменьшает количество ошибок."
+    },
+    {
+      "type": "heading",
+      "content": "Абсолютные и относительные пути"
+    },
+    {
+      "type": "paragraph",
+      "content": "Абсолютный путь начинается с корня (/) и указывает полное расположение файла. Относительный путь указывается от текущей директории."
+    },
+    {
+      "type": "table",
+      "content": {
+        "headers": ["Тип пути", "Пример", "Описание"],
+        "rows": [
+          ["Абсолютный", "/home/student/docs", "От корневой директории"],
+          ["Относительный", "./docs или ../docs", "От текущей позиции"],
+          ["Домашний", "~/docs", "От домашней директории"]
+        ]
+      }
+    }
+  ],
+  "quiz": {
+    "id": "nav-quiz",
+    "title": "Проверка знаний",
+    "description": "Проверьте понимание навигации по файловой системе",
+    "passingScore": 70,
+    "questions": [
+      {
+        "id": "q1",
+        "type": "single-choice",
+        "question": "Что показывает команда pwd?",
+        "options": ["Список файлов", "Текущую директорию", "Версию ядра", "Имя пользователя"],
+        "correctAnswer": "Текущую директорию",
+        "explanation": "pwd расшифровывается как print working directory.",
+        "points": 10
+      },
+      {
+        "id": "q2",
+        "type": "single-choice",
+        "question": "Какой символ обозначает корневую директорию?",
+        "options": ["~", "#", "/", "$"],
+        "correctAnswer": "/",
+        "explanation": "Символ / обозначает корень файловой системы.",
+        "points": 10
+      },
+      {
+        "id": "q3",
+        "type": "true-false",
+        "question": "Команда cd .. возвращает в родительскую директорию",
+        "correctAnswer": "true",
+        "explanation": ".. обозначает родительскую директорию.",
+        "points": 10
+      }
+    ]
+  },
+  "terminalLabId": "lab-navigation",
+  "relatedLessons": ["intro-to-linux", "file-operations"],
+  "updatedAt": "2024-01-01T00:00:00Z",
+  "xpReward": 60
+}
