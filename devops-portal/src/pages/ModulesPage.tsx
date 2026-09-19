@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { contentService } from '../services/contentService'
 import { useProgress } from '../hooks/useProgress'
-import { Module } from '../types'
+import type { Module } from '../types'
 import { Book, Clock, TrendingUp } from 'lucide-react'
 
 export default function ModulesPage() {

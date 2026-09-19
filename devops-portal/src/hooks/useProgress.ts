@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from 'react';
 import { progressService } from '../services/progressService';
-import { UserProgress, UserProfile, UserSettings } from '../types';
+import type { UserProgress, UserProfile, UserSettings } from '../types';
 
 export function useProgress() {
   const [progress, setProgress] = useState<UserProgress>(() => progressService.getProgress());

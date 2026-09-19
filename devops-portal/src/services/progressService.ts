@@ -3,7 +3,7 @@
  * Хранение данных в localStorage с возможностью экспорта/импорта
  */
 
-import {
+import type {
   UserProgress,
   UserProfile,
   UserSettings,

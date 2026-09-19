@@ -2,19 +2,17 @@ import { useState, useEffect } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { contentService } from '../services/contentService'
 import { useProgress } from '../hooks/useProgress'
-import { Lesson, ContentBlock, CodeBlock, TableData } from '../types'
-import { ArrowLeft, ArrowRight, Bookmark, CheckCircle, Copy } from 'lucide-react'
+import type { Lesson, ContentBlock, CodeBlock, TableData } from '../types'
+import { ArrowLeft, Bookmark, CheckCircle, Copy } from 'lucide-react'
 import { copyToClipboard } from '../utils/helpers'
 
 export default function LessonPage() {
   const { moduleSlug, lessonSlug } = useParams<{ moduleSlug: string; lessonSlug: string }>()
   const [lesson, setLesson] = useState<Lesson | null>(null)
   const [loading, setLoading] = useState(true)
-  const [showQuiz, setShowQuiz] = useState(false)
   const [quizAnswers, setQuizAnswers] = useState<Record<string, string | string[]>>({})
   const [quizResult, setQuizResult] = useState<{score: number; total: number; passed: boolean} | null>(null)
-  const { completeLesson, toggleBookmark, isBookmarked, saveQuizResult, progress } = useProgress()
-  const navigate = useNavigate()
+  const { completeLesson, toggleBookmark, isBookmarked, saveQuizResult } = useProgress()
 
   useEffect(() => {
     if (!moduleSlug || !lessonSlug) return

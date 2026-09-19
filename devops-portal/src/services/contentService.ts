@@ -3,7 +3,7 @@
  * Абстракция над источниками данных - позволяет легко заменить JSON на API
  */
 
-import { Module, Lesson, ReferenceEntry, SiteConfig } from '../types';
+import type { Module, Lesson, ReferenceEntry, SiteConfig } from '../types';
 
 const CONTENT_BASE_URL = '/content';
 

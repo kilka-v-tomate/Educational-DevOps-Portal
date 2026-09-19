@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { contentService } from '../services/contentService'
 import { useProgress } from '../hooks/useProgress'
-import { Module, Lesson } from '../types'
+import type { Module, Lesson } from '../types'
 import { ArrowLeft, CheckCircle, Circle, Clock } from 'lucide-react'
 
 export default function ModulePage() {

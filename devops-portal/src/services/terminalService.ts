@@ -2,7 +2,7 @@
  * Сервис терминала - эмуляция командной строки Linux
  */
 
-import { TerminalState, FileSystemNode, CommandResult, TerminalCommand, TerminalLab } from '../types';
+import type { TerminalState, FileSystemNode, CommandResult, TerminalLab } from '../types';
 
 class TerminalService {
   /**
@@ -95,7 +95,6 @@ class TerminalService {
     // Установка родительских ссылок
     this.setParentReferences(rootDir);
 
-    const homeDir = this.resolvePath('/home/student', rootDir) as FileSystemNode;
 
     return {
       currentDir: '/home/student',
@@ -294,7 +293,6 @@ class TerminalService {
   }
 
   private cmdMkdir(args: string[], state: TerminalState): CommandResult {
-    const recursive = args.includes('-p');
     const dirNames = args.filter(a => a !== '-p');
 
     for (const dirName of dirNames) {
@@ -343,7 +341,6 @@ class TerminalService {
   }
 
   private cmdRm(args: string[], state: TerminalState): CommandResult {
-    const recursive = args.includes('-r') || args.includes('-R');
     const force = args.includes('-f');
     const targets = args.filter(a => !a.startsWith('-'));
 
@@ -360,7 +357,6 @@ class TerminalService {
       }
 
       const node = parentDir.children[index];
-      if (node.type === 'directory' && !recursive) {
         return { 
           success: false, 
           output: '', 

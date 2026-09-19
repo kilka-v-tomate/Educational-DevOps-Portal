@@ -5,49 +5,52 @@ node_modules/
 # Build outputs
 dist/
 build/
-coverage/
-htmlcov/
+target/
 
 # Environment variables
 .env
 .env.local
-.env.*
+*.env.*
 
-# IDE specific
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
-*.tmp
 
-# Logs
-*.log
-
-# Python related (if any Python files are present)
+# Python specific
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
-*.so
-.coverage
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
 
-# TypeScript/JavaScript build artifacts
-*.tsbuildinfo
-*.js.map
-*.jsx.map
-*.ts.map
+# Logs
+*.log
 
-# Vite specific
-!.vite/
-
-# OS specific
+# OS generated files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
 # Testing
-.mypy_cache/
-.pytest_cache/
-.nyc_output/
-coverage.xml
+.coverage
+coverage/
+htmlcov/
+.nyc_output
+istanbul.out
+
+# Temporary files
+*.tmp
+*.temp
+*~
 ```
