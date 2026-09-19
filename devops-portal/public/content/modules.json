@@ -1,0 +1,34 @@
+[
+  {
+    "id": "linux-basics",
+    "slug": "linux-basics",
+    "title": "Основы Linux",
+    "description": "Изучите базовые концепции Linux, навигацию по файловой системе и основные команды",
+    "icon": "terminal",
+    "order": 1,
+    "lessons": ["intro-to-linux", "filesystem-navigation", "file-operations"],
+    "objectives": [
+      "Понимать структуру файловой системы Linux",
+      "Уметь навигировать по директориям",
+      "Создавать, копировать и удалять файлы"
+    ],
+    "estimatedDuration": 120,
+    "difficulty": "beginner"
+  },
+  {
+    "id": "docker-basics",
+    "slug": "docker-basics",
+    "title": "Docker и контейнеризация",
+    "description": "Освойте основы контейнеризации с Docker",
+    "icon": "box",
+    "order": 2,
+    "lessons": ["docker-intro", "docker-images", "docker-containers"],
+    "objectives": [
+      "Понимать концепцию контейнеризации",
+      "Создавать Docker образы",
+      "Запускать и управлять контейнерами"
+    ],
+    "estimatedDuration": 180,
+    "difficulty": "intermediate"
+  }
+]

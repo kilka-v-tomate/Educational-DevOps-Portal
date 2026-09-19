@@ -1,0 +1,8 @@
+{
+  "siteName": "DevOps Educational Portal",
+  "siteDescription": "Образовательный портал для изучения DevOps",
+  "defaultTheme": "dark",
+  "gamificationEnabled": true,
+  "certificatesEnabled": true,
+  "version": "1.0.0"
+}
