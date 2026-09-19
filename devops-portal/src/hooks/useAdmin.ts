@@ -19,14 +19,13 @@ export function useAdmin() {
     }
   }
 
-  const addModule = (module: Omit<Module, 'id' | 'updatedAt'>) => {
+  const addModule = (module: Omit<Module, 'id'>) => {
     // В реальной реализации здесь был бы API вызов
     // Для демонстрации просто обновляем локальное состояние
     const newModule: Module = {
       ...module,
-      id: `module-${Date.now()}`,
-      updatedAt: new Date().toISOString()
-    }
+      id: `module-${Date.now()}`
+    } as Module
     setModules(prev => [...prev, newModule])
     alert('Модуль добавлен (демо режим - данные не сохраняются)')
   }

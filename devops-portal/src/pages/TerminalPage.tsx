@@ -10,6 +10,7 @@ export default function TerminalPage() {
   const [currentLabIndex, setCurrentLabIndex] = useState(0)
   const [input, setInput] = useState('')
   const [history, setHistory] = useState<{ command: string; output: string }[]>([])
+  const [terminalState, setTerminalState] = useState<any>(null)
   const { completeLab, isLabCompleted } = useProgress()
 
   useEffect(() => {
@@ -26,13 +27,14 @@ export default function TerminalPage() {
   }, [])
 
   const handleCommand = async (cmd: string) => {
-    const result = terminalService.executeCommand(cmd)
-    setHistory(prev => [...prev, { command: cmd, output: result.output }])
+    const newState = terminalState || { currentDir: '/home/student', commandHistory: [] }
+    const result = terminalService.executeCommand(cmd, newState)
+    setTerminalState(newState)
+    setHistory(prev => [...prev, { command: cmd, output: result.output || result.error || '' }])
     
     // Проверка выполнения лабораторной
     if (selectedLab && !isLabCompleted(selectedLab.id)) {
-      const state = terminalService.getState()
-      const isCompleted = terminalService.checkLabCompletion(selectedLab, state)
+      const isCompleted = terminalService.checkLabCompletion(selectedLab, newState)
       if (isCompleted) {
         completeLab(selectedLab.id, selectedLab.points)
         setHistory(prev => [...prev, { 

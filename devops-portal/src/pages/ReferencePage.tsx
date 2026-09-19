@@ -125,7 +125,7 @@ export default function ReferencePage() {
                       {selectedItem.examples.map((example, index) => (
                         <div key={index} className="mb-4">
                           <pre className="bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto">
-                            <code>{example}</code>
+                            <code>{(example as any).code || example}</code>
                           </pre>
                         </div>
                       ))}

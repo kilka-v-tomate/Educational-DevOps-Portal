@@ -357,6 +357,7 @@ class TerminalService {
       }
 
       const node = parentDir.children[index];
+      if (node.type === 'directory') {
         return { 
           success: false, 
           output: '', 

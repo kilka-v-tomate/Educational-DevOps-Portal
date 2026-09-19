@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { useAdmin } from '../hooks/useAdmin'
-import type { Module } from '../types'
 import { Upload, Download } from 'lucide-react'
 
 export default function AdminPage() {
@@ -19,7 +18,9 @@ export default function AdminPage() {
       objectives: [],
       lessons: [],
       prerequisites: [],
-      xpReward: 100
+      order: modules.length,
+      estimatedDuration: 60,
+      difficulty: 'beginner'
     })
     setNewModuleSlug('')
     setNewModuleTitle('')
@@ -109,12 +110,6 @@ export default function AdminPage() {
                     <p className="text-sm text-gray-600 dark:text-gray-400">{module.slug}</p>
                   </div>
                   <div className="flex space-x-2">
-                    <button
-                      onClick={() => setEditingModule(module)}
-                      className="px-3 py-1 bg-blue-600 text-white rounded text-sm hover:bg-blue-700"
-                    >
-                      Редактировать
-                    </button>
                     <button
                       onClick={() => deleteModule(module.id)}
                       className="px-3 py-1 bg-red-600 text-white rounded text-sm hover:bg-red-700"
